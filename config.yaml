@@ -3,3 +3,8 @@ candidate-name:
 line-access-token-key:
   "line-access-token-test"
   # "line-access-token-real"
+
+url-thaipost:
+  "https://kbms.thailandpost.com/portal"
+url-thai-provinces:
+  "https://raw.githubusercontent.com/kongvut/thai-province-data/master/api_province.json"
