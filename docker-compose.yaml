@@ -7,3 +7,29 @@ services:
       - type: bind
         source: ./build
         target: /build
+    depends_on:
+      postgres:
+        condition: service_healthy
+    links:
+      - "postgres"
+
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: admin
+      # will need to handle password better
+      POSTGRES_PASSWORD: temp_password
+      PGDATA: /data/postgres
+    volumes:
+      - postgres-db:/data/postgres
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U admin"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  postgres-db:
+    driver: local

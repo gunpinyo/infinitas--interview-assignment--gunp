@@ -4,7 +4,7 @@ This repository contains the assignment (for Gun Pinyo)
 as an interview preparation for Infinitas (by Krungthai).
 
 Note: to ensure the reproducibility, we will encapsulates
-the whole assignment using Docker (see `.Dockerfile`).
+the whole assignment using Docker (see `.Dockerfile` and `docker-compose.yaml`).
 
 Note: to ensure the confidentiality, we will put all secret in `secret.yaml`,
 which only exists locally. I will attach this secret file in the submission
@@ -91,3 +91,9 @@ This table is generated from a function
 `generate_province_name_to_num_locations` in [`src/task_2.py`](src/task_2.py),
 which you can see the actual result in
 [`province-name-to-num-locations.csv`](province-name-to-num-locations.csv).
+
+# Task 3: SQL Dichana
+I couldn't finish this task in time but you can see my working progress in:
+- [`.Dockerfile`](.Dockerfile)
+- [`docker-compose.yaml`](docker-compose.yaml)
+- [`src/task_3.py`](src/task_3.py)

@@ -6,8 +6,10 @@ RUN  pip install pyyaml \
                  requests \
                  beautifulsoup4 \
                  pandas \
+                 pandasql \
                  geopandas \
-                 matplotlib
+                 matplotlib \
+                 psycopg2-binary
 
 COPY secret.yaml secret.yaml
 COPY config.yaml config.yaml
@@ -16,4 +18,4 @@ COPY src/*       src/
 
 WORKDIR src/
 
-CMD ["python", "task_2.py"]
+CMD ["python", "task_3.py"]

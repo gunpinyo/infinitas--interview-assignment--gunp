@@ -117,6 +117,7 @@ def generate_province_name_to_num_locations(df : pd.DataFrame):
     with open("../build/province-name-to-num-locations.csv",
               "wt", encoding="utf-8") as csv_file:
         csv_writer = csv.writer(csv_file, delimiter=",")
+        csv_writer.writerow(["province-name", "num-locations"])
         for key, val in result_list:
             csv_writer.writerow([key, val])
 
@@ -128,7 +129,7 @@ def main():
         url_provinces = config_data["url-thai-provinces"]
         df = scrape_thaipost(url_thaipost)
         # print(df)
-        # create_geopanda_dataframe(df)
+        create_geopanda_dataframe(df)
         province_dict = get_thai_provinces(url_provinces)
         sanity_check_address_consistency(province_dict, df)
         generate_province_name_to_num_locations(df)

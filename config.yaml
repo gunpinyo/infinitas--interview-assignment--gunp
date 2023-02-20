@@ -8,3 +8,8 @@ url-thaipost:
   "https://kbms.thailandpost.com/portal"
 url-thai-provinces:
   "https://raw.githubusercontent.com/kongvut/thai-province-data/master/api_province.json"
+
+url-csv-checkin:
+  "https://storage.googleapis.com/data_innovation_sandbox_temp/recruitment/dichana.in.csv"
+url-csv-checkout:
+  "https://storage.googleapis.com/data_innovation_sandbox_temp/recruitment/dichana.out.csv"
